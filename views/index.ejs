@@ -1,0 +1,63 @@
+<%- include("partials/header")%>
+
+    <div class="container">
+        <div class="img">
+            <img src="photos/happy.svg" alt="">
+        </div>
+        <div class="route">
+            <h1>Welcome to Meeting Management System</h1>
+            <p>Sign Up to manage your day more efficiently.</p>
+            <div class="studentAndTeacher">
+                <div class="student">
+                    <p>Sign up as a Students and Employees</p>
+                    <form method="GET" action="/student-signup">
+                        <button type="submit" class="orangeButton">Sign Up</button>
+                    </form>
+                    <form action="/student-signin">
+                        <button type="submit" class="whiteButton">Sign In</button>
+                    </form>
+                </div>
+                <div class="vLine"></div>
+                <div class="teacher">
+                    <p>Sign up as a Teachers and Employers</p>
+                    <form method="GET" action="/teacher-signup">
+                        <button type="submit" class="orangeButton">Sign Up</button>
+                    </form>
+                    <form action="/teacher-signin">
+                        <button type="submit" class="whiteButton">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="img">
+                <img src="photos/happy1.svg" alt="">
+            </div>
+            <div class="cardContainer">
+                <h1>Meetings View</h1>
+                <p>Allows to manage your meeting (entry point of application), here you will see TOP 5 meetings for the coming days. You can also search for meetings on this page</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="photos/happy2.svg" alt="">
+            </div>
+            <div class="cardContainer">
+                <h1>Add/Edit Meeting View</h1>
+                <p>Allows you to Add/Edit new or existing meeting and also create one.You can reach this view by clicking on Add Agenda text on Meetings view.And manage your day.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="photos/happy3.svg" alt="">
+            </div>
+            <div class="cardContainer">
+                <h1>Agenda View</h1>
+                <p>You can reach this view by clicking on Add Agenda text on Meetings view. Agenda view allows you to add Agenda related to meetings. Agenda view has following functionalities: [#LI] Add Agenda</p>
+            </div>
+        </div>
+    </div>
+    
+<%- include("partials/footer")%>

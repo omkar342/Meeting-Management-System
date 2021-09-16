@@ -1,0 +1,33 @@
+<%- include("partials/header")%>
+    
+<div class="teacherMeeting">
+    <h1>All your scheduled meeting in one table to make your life easy.</h1>
+    <table class="teacherTable">
+        <tr>
+          <th>Serial No.</th>
+          <th>Day & Date</th>
+          <th>Timming</th>
+          <th>Topic</th>
+          <th>Link<div>(Click to Join the Meeting)</div></th>
+        </tr>
+        <% rows.forEach(function(row,index) { %>
+        <tr>
+          <td><%= ++index %></td>
+          <td><%= row.date.toString().substring(0,15) %></td>
+          <td><%= row.timing %></td>
+          <td><%= row.topic %></td>
+          <td><a href="<%= row.link %>">Link</a></td>
+        </tr>
+        <% }) %>
+    </table>   
+
+    <div class="teacherMeetingFooter">
+        <div class="infobar1">
+        
+        </div>
+        <div class="footer">
+            <p>Made with ❤️ by Omkar</p>
+        </div>
+    </div>
+</div>
+
