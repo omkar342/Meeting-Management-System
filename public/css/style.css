@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+*{
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+.navbar{
+    margin: -8px;
+    margin-bottom: 0;
+    background-color: #ff7f00;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar li{
+    z-index: 1;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 9px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.navbar li :hover{
+    color: #ffffff;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.line{
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media all and (max-width: 700px){
+    .navbar{
+        flex-direction: column;
+    } 
+
+    .navbar ul{
+        width: 100%;
+    }
+
+    .navbar li{
+        display: block;
+        border-top: 1px solid #000000;
+        text-align: center;
+    }
+}
+
+.infobar{
+    background-color: #1f1d1d;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin: -8px;
+    margin-bottom: 10px;
+    height: 45px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #ffd4a8;
+    margin: -10px -8px 10px -8px;
+}
+
+.img{
+    padding: 20px;
+}
+
+.img img{
+    height: 500px;
+    width: 500px;
+    transition: 1.5s;
+}
+
+.infobar1{
+    background-color: #1f1d1d;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    margin: -8px;
+    margin-top: 10px;
+    height: 18px;
+}
+
+.footer{
+    background-color: #ff7f00;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin: -8px;
+    height: 44px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.card{
+    margin: 50px;
+    width: 33%;
+    box-shadow: 2px 4px 8px 1px rgba(0,0,0,0.9);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img{
+    height: 200px;
+    width: 100%;
+}
+
+.img img:hover{
+    cursor: pointer;
+    /* transform: translateY(5px); */
+    transform: scale(0.94);
+}
+
+.cardContainer{
+    padding: 2px 16px;
+    background-color: #ff7f00;
+    border-radius: 0 0 5px 5px;
+}
+
+.route p{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ff7f00;
+}
+
+.studentAndTeacher{
+    display: flex;
+    justify-content: space-between;
+}
+
+.studentAndTeacher p{
+    font-size: 20px;
+    color: #000;
+}
+
+.student{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    margin-top: 20px;
+}
+
+.teacher{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    margin-top: 20px;
+}
+
+.orangeButton{
+    background-color: #ff7f00;
+    border: 2px solid #ff7f00;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 0px 6px 1px #1f1d18;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.orangeButton:hover{
+    box-shadow: 1px 2px 6px 3px #181818;
+}
+
+.orangeButton:active{
+    box-shadow: 1px 2px 6px 3px #181818;
+    transform: scale(0.95);
+    text-decoration: underline;
+}
+
+.whiteButton{
+    background-color: transparent;
+    border: 2px solid #ff7f00;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 0px 2px 1px #1f1d18;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.whiteButton:hover{
+    box-shadow: 1px 2px 6px 3px #181818;
+    background-color: #f8b068;
+}
+
+.whiteButton:active{
+    box-shadow: 1px 2px 6px 3px #181818;
+    background-color: #f8b068;
+    transform: scale(0.95);
+    text-decoration: underline;
+}
+
+.vLine{
+    border-right: 2px solid #ff7f00;
+    height: 300px;
+    margin: 10px;
+}
+
+.register{
+    margin-bottom: -10px;
+}
+
+.regContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border: 2px solid #ff7f00;
+    box-shadow: 3px 2px 12px 3px #1f1d1d;
+    border-radius: 50px;
+}
+
+.left{
+    width: 50%;
+    color: #ff7f00;
+    border-radius: 50px 0 0 50px;
+    padding: 5px;
+}
+
+.left img{
+    height: 400px;
+    width: 400px;
+}
+
+.left .img{
+    margin-bottom: 0;
+}
+
+.left .img p{
+    font-size: 25px;
+    margin: 0 0 10px 0;
+}
+
+.right{
+    margin: 0 20px;
+    text-align: left;
+    font-size: 25px;
+    align-items: center;
+}
+
+.right h1{
+    text-align: center;
+    color: #000000;
+    font-size: 35px;
+}
+
+.right input{
+    display: block;
+    width: 458px;
+    padding: 5px;
+    margin: 5px 5px 0 0;
+    background-color: #f8c490;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #ff7f00;
+}
+
+.right .orangeButton{
+    width: 95%;
+    margin-top: 40px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.regContainer .vLine{
+    height: 100%;
+    margin: -1px;
+}
+
+.logContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border: 2px solid #ff7f00;
+    box-shadow: 3px 2px 12px 3px #1f1d1d;
+    border-radius: 50px;
+}
+
+.logContainer .vLine{
+    height: 100%;
+    margin: -1px;
+}
+
+.logContainer .left h1{
+    font-size: 25px;
+    margin: 10px 0 0 0;
+}
+
+.passwordError{
+    color: #ff0000;
+    font-size: 20px;
+}
+
+.teacherMeeting{
+    text-align: center;
+    background-color: #ffd4a8;
+    margin: -21px -8px -9px -8px;
+    height: 614px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.teacherTable{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table , th , td{
+    border: 2px solid #000;
+    margin: 10px;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th,td{
+    margin-right: 20px;
+}
+
+td a{
+    margin: 0 10px;
+}
+
+.teacherMeetingFooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.addButton{
+    text-align: right;
+    position: relative;
+    right: 300px;
+}
+
+.aButton{
+    background-color: #008000;
+    border-radius: 20px;
+    width: 180px;
+    height: 50px;
+    padding: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.aButton a{
+    text-decoration: none;
+    color: #000;
+}
+
+.addedBar p{
+    margin: 10px;
+    background-color: #4AA96C;
+    width: 75%;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.meetingAdded {
+    background-color: #ffd4a8;
+    margin: -10px -8px;
+}
+
+
+.fieldEmpty p{
+    margin: 10px;
+    background-color: #cf0000;
+    width: 75%;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}

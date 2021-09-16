@@ -1,0 +1,44 @@
+<%- include("partials/header")%>
+    
+<div class="teacherMeeting">
+    <h1>Manage Your Meeting For Your Students And Employees.</h1>
+    <table class="teacherTable">
+        <tr>
+          <th>Serial No.</th>
+          <th>Day & Date</th>
+          <th>Timming</th>
+          <th>Topic</th>
+          <th>Link<div>(Click to Join the Meeting)</div></th>
+          <th>Action</th>
+        </tr>
+        <% rows.forEach(function(row,index) { %>
+        <tr>
+          <td><%= ++index %></td>
+          <td><%= row.date.toString().substring(0,15) %></td>
+          <td><%= row.timing %></td>
+          <td><%= row.topic %></td>
+          <td><%= row.link %></td>
+          <td>
+              <a href="/editmeeting/<%= row.id %>">Edit</a>
+              <a href="/<%= row.id %>" method="POST" type="button">Delete</a>
+          </td>
+        </tr>
+        <% }) %>
+    </table>   
+
+    <div class="addButton">
+        <form action="/addmeeting" method="GET">
+            <button class="aButton" type="submit"><a href="/addmeeting">+ Add Meeting</a></button>
+        </form>
+    </div>
+
+    <div class="teacherMeetingFooter">
+        <div class="infobar1">
+        
+        </div>
+        <div class="footer">
+            <p>Made with ❤️ by Omkar</p>
+        </div>
+    </div>
+</div>
+

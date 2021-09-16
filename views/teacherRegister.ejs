@@ -1,0 +1,36 @@
+<%- include("partials/header")%>
+
+<div class="register">
+    <div class="container">
+        <div class="regContainer">
+            <div class="left">
+                <h1>Sign Up For Free and Manage Your Day.</h1>
+                <div class="img">
+                    <img src="photos/happy4.svg" alt="">
+                    <p>Already Have An Account? <a href="/teacher-signin">SignIn</a>
+                    </p>
+                </div>
+            </div>
+            <div class="vLine"></div>
+            <div class="right">
+                <h1>Sign Up</h1>
+                <form action="/teacher-signup" method="POST">
+                    <label for="email">Email Address:</label>
+                    <input type="email" placeholder="Enter Your Email" name="email" id="email">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="Enter Your Password" name="password" id="password">
+                    <label for="confirmpassword">Confirm Password:</label>
+                    <input type="password" placeholder="Enter Your Password Again" name="confirmpassword" id="confirmpassword">
+                    <% if (error != null) {%>
+                        <div class="passwordError">
+                            <p>*Password and Confirm Password doesn't match.</p>
+                        </div>
+                    <% } %>
+                    <button type="submit" class="orangeButton">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer")%>

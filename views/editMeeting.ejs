@@ -1,0 +1,49 @@
+<%- include("partials/header")%>
+
+<div class="add">
+    <div class="container">
+        <div class="regContainer">
+            <div class="left">
+                <h1>Add And Manage Meetings for Your Employees or Students.</h1>
+                <div class="img">
+                    <img src="../photos/happy6.svg" alt="">
+                    <p>Don't have an account ?<a href="/teacher-signup">SignUp</a>
+                    </p>
+                </div>
+            </div>
+            <div class="vLine"></div>
+            <div class="right">
+                <h1>Edit Meeting</h1>
+                <% rows.forEach(function(row) { %>
+                    <form action="/editmeeting/<%= row.id %>" method="POST">
+                        <label for="topic">Add Topic:</label>
+                        <input type="text" placeholder="Enter Your Topic" name="topic" id="topic" value="<%= row.topic %>">
+                        <label for="date">Date:</label>
+                        <input type="date" placeholder="Date" name="date" id="date" value="<%= row.date %>">
+                        <label for="time">Time:</label>
+                        <input type="time" placeholder="Enter Your Password Again" name="time" id="time" value="<%= row.timing %>">
+                        <label for="link">Add Link:</label>
+                        <input type="text" placeholder="Enter The Link" name="link" id="link" value="<%= row.link %>">
+                        <button type="submit" class="orangeButton">+ Add Meeting</button>
+                    </form>
+                <% }) %>
+                <% if (success==1) {%>
+                    <div class="meetingAdded">
+                        <div class="addedBar">
+                            <p>Meeting Updated Succesfully. <a href="/teacherMeeting">Go Back To Meetings Page.</a></p>
+                        </div>
+                    </div>
+                <% } %>
+                <% if (success==2) {%>
+                    <div class="meetingAdded">
+                        <div class="fieldEmpty">
+                            <p>Kindly Fill All The Fields.</p>
+                        </div>
+                    </div>
+                <% } %> 
+            </div>
+        </div>
+    </div>   
+</div>
+
+<%- include("partials/footer")%>
