@@ -1,0 +1,1 @@
+CREATE TABLE `meetingmanagement`.`meetings` ( `id` INT NOT NULL , `date` DATE NOT NULL , `timing` TIME NOT NULL , `topic` VARCHAR(1000) NOT NULL , `Link` VARCHAR(1000) NOT NULL ) ENGINE = InnoDB;
